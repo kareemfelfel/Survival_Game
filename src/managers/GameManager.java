@@ -73,7 +73,7 @@ public class GameManager extends JFrame implements Runnable{
         execute = true;
         audio = new GameAudio("Audio/TangoMusic (1).wav", true);
         //Instantiate the gameObjects.Player
-        player = new Player("Images/spritesheet.png", getWindowWidth(), getWindowHeight());
+        player = new Player("Images/Jenni.png", getWindowWidth(), getWindowHeight());
         //Instantiate the game objects.  We will have 6 arrows in the game
         gameObjects = new ArrayList<GameObject>();
         food = new ArrayList<Food>();
