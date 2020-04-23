@@ -20,15 +20,16 @@ public class Arrows extends GameObject
     public static final float SCALE = 0.2f;
     public Arrows(String spriteFileName)
     {
+        //Affine transformation
         at = new AffineTransform();
+        //random object
         rnd = new Random();
         //Load the image for aBoneObject
         loadSprite(spriteFileName);
-
         spriteSheet = sprite;
-
+        //random Y position along the same height of the screen fixed to the side
         int RandomY = (int) (Math.random() * (4 - 1 + 1) + 1);
-        //sprite = spriteSheet.getSubimage((0*TILE_WIDTH )+ 60, (4*TILE_HEIGHT)+ 95, TILE_WIDTH, TILE_HEIGHT);
+        //spreading them evenly with random positions on Y
         if(RandomY != 1)
         {
             sprite = spriteSheet.getSubimage((0 * TILE_WIDTH) + 60, (RandomY * TILE_HEIGHT) + 30, TILE_WIDTH, TILE_HEIGHT);
